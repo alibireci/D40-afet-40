@@ -32,3 +32,20 @@ export interface EventItem {
   location: { en: string; tr: string };
   type: 'conference' | 'training' | 'workshop';
 }
+
+export interface BuildingRequest {
+  id: string;
+  address: string;
+  neighborhood: string;
+  type: 'safety_test' | 'retrofitting';
+  estimatedCost?: string;
+  status: 'pending' | 'scheduled' | 'completed';
+}
+
+export interface Volunteer {
+  id: string;
+  name: string;
+  neighborhood: string;
+  trainingStatus: 'certified' | 'in_progress' | 'not_started';
+  specialty: string;
+}

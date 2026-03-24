@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { useLanguage } from '../hooks/useLanguage';
-import { CheckCircle2, Shield, Globe, Users, Zap, Award } from 'lucide-react';
+import { CheckCircle2, Shield, Globe, Users, Zap, Award, GraduationCap, ShieldAlert } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Membership() {
@@ -11,6 +11,9 @@ export default function Membership() {
     { title: 'International Visibility', desc: 'Showcase your city\'s resilience achievements on the global stage.', icon: <Globe /> },
     { title: 'Policy Influence', desc: 'Participate in high-level policy dialogues with international organizations.', icon: <Shield /> },
     { title: 'Capacity Building', desc: 'Exclusive training for municipal staff on disaster recovery and climate adaptation.', icon: <Award /> },
+    { title: t('membership.benefit_training'), desc: 'Integrated platform to promote and manage citizen search & rescue training.', icon: <GraduationCap /> },
+    { title: t('membership.benefit_volunteers'), desc: 'Infrastructure to build and track neighborhood-level volunteer networks.', icon: <Users /> },
+    { title: t('membership.benefit_safety'), desc: 'Tools for citizens to request building safety tests and retrofitting analysis.', icon: <ShieldAlert /> },
   ];
 
   const types = [

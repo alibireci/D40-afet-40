@@ -81,3 +81,16 @@ export const events: EventItem[] = [
     type: 'training',
   },
 ];
+
+export const buildingRequests: BuildingRequest[] = [
+  { id: '1', address: 'Atatürk Cad. No: 45', neighborhood: 'Kadıköy', type: 'safety_test', status: 'pending' },
+  { id: '2', address: 'Bağdat Cad. No: 120', neighborhood: 'Maltepe', type: 'retrofitting', estimatedCost: '₺450,000', status: 'scheduled' },
+  { id: '3', address: 'İstiklal Cad. No: 12', neighborhood: 'Beyoğlu', type: 'safety_test', status: 'completed' },
+  { id: '4', address: 'Cumhuriyet Bulv. No: 88', neighborhood: 'Beşiktaş', type: 'retrofitting', estimatedCost: '₺1,200,000', status: 'pending' },
+];
+
+export const volunteers: Volunteer[] = [
+  { id: '1', name: 'Ahmet Yılmaz', neighborhood: 'Kadıköy', trainingStatus: 'certified', specialty: 'First Aid' },
+  { id: '2', name: 'Ayşe Demir', neighborhood: 'Beşiktaş', trainingStatus: 'in_progress', specialty: 'Search & Rescue' },
+  { id: '3', name: 'Mehmet Can', neighborhood: 'Üsküdar', trainingStatus: 'certified', specialty: 'Logistics' },
+];
