@@ -1,0 +1,5 @@
+{
+  "name": "D40 - Cities United for Disaster Resilience",
+  "description": "A global network of cities building resilience, recovery, and future-ready urban systems.",
+  "requestFramePermissions": ["geolocation"]
+}
