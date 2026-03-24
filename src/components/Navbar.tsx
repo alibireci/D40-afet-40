@@ -16,7 +16,7 @@ export default function Navbar() {
     { name: t('nav.policy'), path: '/policy' },
     { name: t('nav.news'), path: '/news' },
     { name: t('nav.contact'), path: '/contact' },
-    { name: 'Dashboard', path: '/dashboard' },
+    { name: language === 'tr' ? 'Kontrol Paneli' : 'Dashboard', path: '/dashboard' },
   ];
 
   return (

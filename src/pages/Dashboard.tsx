@@ -30,7 +30,7 @@ export default function Dashboard() {
             
             <button className="w-full flex items-center space-x-3 p-4 bg-brand-blue text-white rounded-xl font-bold text-sm">
               <LayoutDashboard size={18} />
-              <span>Overview</span>
+              <span>{t('dashboard.overview')}</span>
             </button>
             <button className="w-full flex items-center space-x-3 p-4 text-brand-blue/60 hover:bg-white rounded-xl font-bold text-sm transition-all">
               <ShieldAlert size={18} />
@@ -52,7 +52,7 @@ export default function Dashboard() {
             <div className="pt-8">
               <button className="w-full flex items-center space-x-3 p-4 text-red-500 hover:bg-red-50 rounded-xl font-bold text-sm transition-all">
                 <LogOut size={18} />
-                <span>Logout</span>
+                <span>{t('dashboard.logout')}</span>
               </button>
             </div>
           </aside>
@@ -73,7 +73,7 @@ export default function Dashboard() {
               <div className="bg-white rounded-3xl p-8 shadow-sm border border-brand-blue/5">
                 <div className="flex justify-between items-center mb-6">
                   <h3 className="text-xl font-bold">{t('dashboard.building_safety')}</h3>
-                  <span className="text-xs font-bold text-brand-orange bg-brand-orange/10 px-2 py-1 rounded">Live Requests</span>
+                  <span className="text-xs font-bold text-brand-orange bg-brand-orange/10 px-2 py-1 rounded">{t('dashboard.live_requests')}</span>
                 </div>
                 <div className="space-y-4">
                   {buildingRequests.filter(r => r.type === 'safety_test').map(req => (
@@ -95,7 +95,7 @@ export default function Dashboard() {
               <div className="bg-white rounded-3xl p-8 shadow-sm border border-brand-blue/5">
                 <div className="flex justify-between items-center mb-6">
                   <h3 className="text-xl font-bold">{t('dashboard.retrofitting')}</h3>
-                  <span className="text-xs font-bold text-brand-orange bg-brand-orange/10 px-2 py-1 rounded">Cost Analysis</span>
+                  <span className="text-xs font-bold text-brand-orange bg-brand-orange/10 px-2 py-1 rounded">{t('dashboard.cost_analysis')}</span>
                 </div>
                 <div className="space-y-4">
                   {buildingRequests.filter(r => r.type === 'retrofitting').map(req => (
@@ -118,7 +118,7 @@ export default function Dashboard() {
                   <h3 className="text-xl font-bold">{t('dashboard.volunteers')}</h3>
                   <button className="text-xs font-bold text-brand-blue/40 hover:text-brand-orange flex items-center space-x-1">
                     <Search size={12} />
-                    <span>Search Neighborhood</span>
+                    <span>{t('dashboard.search_neighborhood')}</span>
                   </button>
                 </div>
                 <div className="space-y-4">
@@ -140,7 +140,7 @@ export default function Dashboard() {
 
               <div className="bg-brand-blue rounded-3xl p-8 text-white">
                 <h3 className="text-xl font-bold mb-6">{t('dashboard.training')}</h3>
-                <p className="text-sm text-white/60 mb-8">Promote these certified training platforms to your citizens to build a resilient community.</p>
+                <p className="text-sm text-white/60 mb-8">{t('dashboard.training_desc')}</p>
                 <div className="space-y-4">
                   {[
                     { name: 'AFAD Gönüllü Eğitimi', url: 'https://gonullu.afad.gov.tr/' },

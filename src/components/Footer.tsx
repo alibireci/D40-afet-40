@@ -3,7 +3,7 @@ import { Facebook, Twitter, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <footer className="bg-brand-blue text-white pt-20 pb-10">
@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display font-bold text-lg mb-6">Quick Links</h4>
+            <h4 className="font-display font-bold text-lg mb-6">{language === 'tr' ? 'Hızlı Bağlantılar' : 'Quick Links'}</h4>
             <ul className="space-y-4 text-sm text-white/60">
               <li><Link to="/about" className="hover:text-white transition-colors">{t('nav.about')}</Link></li>
               <li><Link to="/membership" className="hover:text-white transition-colors">{t('nav.membership')}</Link></li>
@@ -35,17 +35,17 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display font-bold text-lg mb-6">Resources</h4>
+            <h4 className="font-display font-bold text-lg mb-6">{language === 'tr' ? 'Kaynaklar' : 'Resources'}</h4>
             <ul className="space-y-4 text-sm text-white/60">
-              <li><Link to="/policy" className="hover:text-white transition-colors">Policy Briefs</Link></li>
-              <li><Link to="/policy" className="hover:text-white transition-colors">Toolkits</Link></li>
-              <li><Link to="/events" className="hover:text-white transition-colors">Upcoming Events</Link></li>
-              <li><Link to="/partners" className="hover:text-white transition-colors">Our Partners</Link></li>
+              <li><Link to="/policy" className="hover:text-white transition-colors">{language === 'tr' ? 'Politika Özetleri' : 'Policy Briefs'}</Link></li>
+              <li><Link to="/policy" className="hover:text-white transition-colors">{language === 'tr' ? 'Araç Kitleri' : 'Toolkits'}</Link></li>
+              <li><Link to="/events" className="hover:text-white transition-colors">{t('nav.events')}</Link></li>
+              <li><Link to="/partners" className="hover:text-white transition-colors">{t('nav.partners')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-display font-bold text-lg mb-6">Contact Us</h4>
+            <h4 className="font-display font-bold text-lg mb-6">{language === 'tr' ? 'Bize Ulaşın' : 'Contact Us'}</h4>
             <ul className="space-y-4 text-sm text-white/60">
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-brand-orange shrink-0" />
@@ -64,11 +64,11 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-white/40">
-          <p>© 2026 D40 Network. All rights reserved.</p>
+          <p>© 2026 D40 Network. {language === 'tr' ? 'Tüm hakları saklıdır.' : 'All rights reserved.'}</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white">Privacy Policy</a>
-            <a href="#" className="hover:text-white">Terms of Service</a>
-            <a href="#" className="hover:text-white">Cookie Policy</a>
+            <a href="#" className="hover:text-white">{language === 'tr' ? 'Gizlilik Politikası' : 'Privacy Policy'}</a>
+            <a href="#" className="hover:text-white">{language === 'tr' ? 'Kullanım Koşulları' : 'Terms of Service'}</a>
+            <a href="#" className="hover:text-white">{language === 'tr' ? 'Çerez Politikası' : 'Cookie Policy'}</a>
           </div>
         </div>
       </div>

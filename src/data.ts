@@ -1,4 +1,4 @@
-import { Project, City, NewsItem, EventItem } from './types';
+import { Project, City, NewsItem, EventItem, BuildingRequest, Volunteer } from './types';
 
 export const projects: Project[] = [
   {
